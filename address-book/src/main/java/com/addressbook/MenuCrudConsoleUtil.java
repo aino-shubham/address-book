@@ -12,7 +12,6 @@ public class MenuCrudConsoleUtil
 	
 	Menu createMenu()
 	{
-		
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter The Menu ");
 		String m_name=sc.next();
@@ -23,26 +22,31 @@ public class MenuCrudConsoleUtil
 	
 	void createMenuItem(Menu m)
 	{
-		
-		int i=0;
-        while(i<4){
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter The Menu Item");
 		String m_name=sc.next();
+		while(!(m_name.equals("Exit"))){
+		
+			
 		MenuItem mi=new MenuItem(m_name);
 		mi.setName(m_name);
 		m.AddMenuItem(mi);
-		i++;
+		 m_name=sc.next();
+		
         }
 	}
 	
 	
 	void displayMenuItem(Menu m)
-	{
+	{	Scanner input=new Scanner(System.in);
+		System.out.println("Menu Items are");
+		int i=1;
 		for(MenuItem obj1:m.al)
 		{
-			System.out.println(obj1.name);
+			System.out.println(i++ +"."+obj1.name);
 		}
+		
+		
 	}
 	
 }

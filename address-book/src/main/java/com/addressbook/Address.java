@@ -3,17 +3,10 @@ import java.util.Scanner;
 
 public class Address
 {
-	int id , zip ;
+	int  zip ;
 	String  name ,street , city , country;
 	
-	public int getId() {
-		return id;
-	}
 	
-	
-	public void setId(int id) {
-		this.id = id;
-	}
 	
 	
 	public int getZip() {
