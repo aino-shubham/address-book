@@ -1,8 +1,6 @@
+package addressbook;
+
 import java.util.Scanner;
-
-import main.java.com.addressbook.MenuItem;
-
-import java.awt.Menu;
 import java.util.Iterator;
 
 
@@ -12,7 +10,7 @@ public class MenuCrudConsoleUtil
 	
 	
 	
-	public Menu createMenu()
+	Menu createMenu()
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter The Menu ");
@@ -22,7 +20,7 @@ public class MenuCrudConsoleUtil
 		return m;
 	}
 	
-	public void createMenuItem(Menu m)
+	void createMenuItem(Menu m)
 	{
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter The Menu Item");
